@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANKR Development | Monthly Newsletter May 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:       #8faf88;
+    --green-light: #a8c4a1;
+    --green-dark:  #6a9062;
+    --green-bg:    #b5ccae;
+    --white:       #ffffff;
+    --off-white:   #f7f5f0;
+    --text-dark:   #2c2c2c;
+    --text-mid:    #4a4a4a;
+    --text-light:  #6e6e6e;
+    --border:      #c8dac4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8ede6;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+
+  /* ── WRAPPER ── */
+  .email-wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--white);
+    box-shadow: 0 8px 60px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--green-bg);
+    padding: 16px 36px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo-icon {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  /* ── NEWSLETTER BADGE ── */
+  .newsletter-badge {
+    background: var(--white);
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 28px 36px;
+    border: 1px solid var(--border);
+  }
+
+  .newsletter-badge span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-dark);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO SECTION ── */
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0 36px 32px;
+    background: var(--green-bg);
+    padding: 28px;
+  }
+
+  .intro-text {
+    padding-right: 20px;
+  }
+
+  .intro-text p {
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+  }
+
+  .intro-text strong {
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .intro-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-logo img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    opacity: 0.6;
+  }
+
+  /* ── HERO IMAGE ── */
+  .hero-image-wrap {
+    margin: 0 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image-wrap img {
+    width: 100%;
+    display: block;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .hero-image-wrap > div:not(.hero-label) {
+    display: none;
+  }
+
+  .hero-label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0,0,0,0.55);
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+  }
+
+  /* ── DELIVERY BANNER ── */
+  .delivery-banner {
+    background: var(--green-bg);
+    margin: 0 36px;
+    text-align: center;
+    padding: 14px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .delivery-banner p {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    text-align: center;
+    padding: 32px 36px 8px;
+  }
+
+  .section-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── DESCRIPTION ── */
+  .description {
+    padding: 20px 36px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .description p {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* ── DOUBLE IMAGE ROW ── */
+  .double-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 28px 36px;
+  }
+
+  .double-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background: var(--green-bg);
+  }
+
+  .double-image > div {
+    display: none;
+  }
+
+  /* ── IMAGE PLACEHOLDER (for images in PDF we can't extract) ── */
+  .img-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--green-bg) 0%, var(--green-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-placeholder span {
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* ── CTA BUTTONS ── */
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 0 36px 32px;
+  }
+
+  .cta-btn {
+    background: var(--green-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 16px 12px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+    transition: background 0.2s ease;
+  }
+
+  .cta-btn:hover {
+    background: var(--green-dark);
+  }
+
+  /* ── SECTION HEADING w/ LINE ── */
+  .section-heading {
+    margin: 8px 36px 20px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .section-heading h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+  }
+
+  /* ── CONSTRUCTION COLLAGE ── */
+  .construction-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin: 0 36px 32px;
+  }
+
+  .construction-grid .cell {
+    height: 160px;
+    background: linear-gradient(160deg, #7a9e73 0%, #5a7a55 100%);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .construction-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .construction-grid .cell > div {
+    display: none;
+  }
+
+  /* ── PROJECTS SECTION ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin: 0 36px 0;
+  }
+
+  .project-card {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #6a9062 0%, #4a7044 100%);
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+  }
+
+  .project-card > div {
+    display: none;
+  }
+
+  /* ── FOOTER GREEN BANNER ── */
+  .footer-banner {
+    background: var(--green-bg);
+    margin: 4px 36px 0;
+    padding: 36px 24px 28px;
+    text-align: center;
+  }
+
+  .footer-banner h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 1.5px solid rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .social-btn:hover {
+    background: rgba(255,255,255,0.35);
+    border-color: rgba(255,255,255,0.8);
+  }
+
+  .social-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--white);
+  }
+
+  /* ── FOOTER CONTACT ── */
+  .footer-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 36px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-left {
+    padding: 24px 20px 28px 0;
+    border-right: 1px solid var(--border);
+  }
+
+  .contact-btn {
+    display: inline-block;
+    border: 1.5px solid var(--green-bg);
+    color: var(--green-dark);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    transition: all 0.2s ease;
+  }
+
+  .contact-btn:hover {
+    background: var(--green-bg);
+    color: var(--white);
+  }
+
+  .footer-right {
+    padding: 24px 0 28px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .footer-logo .fl-text .name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-dark);
+  }
+
+  .footer-logo .fl-text .sub {
+    font-size: 9px;
+    color: var(--text-light);
+    letter-spacing: 0.04em;
+    font-weight: 300;
+  }
+
+  /* ── UNSUBSCRIBE ── */
+  .unsub {
+    text-align: center;
+    padding: 16px 36px 24px;
+    background: var(--white);
+  }
+
+  .unsub p {
+    font-size: 10px;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .unsub a {
+    color: var(--green-dark);
+    text-decoration: underline;
+  }
+
+  /* ── FADE IN ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .email-wrapper > * {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .email-wrapper > *:nth-child(1) { animation-delay: 0.05s; }
+  .email-wrapper > *:nth-child(2) { animation-delay: 0.10s; }
+  .email-wrapper > *:nth-child(3) { animation-delay: 0.15s; }
+  .email-wrapper > *:nth-child(4) { animation-delay: 0.20s; }
+  .email-wrapper > *:nth-child(5) { animation-delay: 0.25s; }
+  .email-wrapper > *:nth-child(6) { animation-delay: 0.30s; }
+  .email-wrapper > *:nth-child(7) { animation-delay: 0.35s; }
+  .email-wrapper > *:nth-child(8) { animation-delay: 0.40s; }
+
+</style>
+</head>
+<body>
+
+<div class="email-wrapper">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <img class="logo-icon" src="ankr_logo.webp" alt="ANKR logo">
+  </div>
+
+  <!-- ── NEWSLETTER BADGE ── -->
+  <div style="padding: 28px 36px 0;">
+    <div class="newsletter-badge" style="margin:0">
+      <span>Monthly Newsletter | May 2026</span>
+    </div>
+  </div>
+
+  <!-- ── INTRO SPLIT ── -->
+  <div class="intro-section">
+    <div class="intro-text">
+      <p>
+        Welcome to our very first monthly newsletter.
+        This month, we are proud to feature our only
+        commercial center under construction, <strong>ANKR
+        Business Yard</strong>. It marks a key milestone in our
+        ongoing development journey.<br><br>
+        Explore the latest updates on our
+        developments, along with a full look at our
+        current residential projects below.
+      </p>
+    </div>
+    <div class="intro-logo">
+      <img src="ANKR-removebg-preview.png" alt="ANKR logo">
+    </div>
+  </div>
+
+  <!-- ── HERO IMAGE ── -->
+  <div class="hero-image-wrap">
+    <img src="ankr_business_yard.jpg" alt="ANKR Business Yard - Hazmieh">
+    <div class="hero-label">ANKR BUSINESS YARD - HAZMIEH</div>
+    <!--
+      The hero image from the PDF shows the ANKR Business Yard exterior at dusk —
+      a modern glass building with green vertical gardens and warm interior lighting.
+      Since images cannot be extracted from the PDF directly, we render a rich
+      CSS scene that matches the composition and colour mood.
+    -->
+    <div style="width:100%;height:340px;background:linear-gradient(180deg,#1a2e1a 0%,#243824 40%,#1e2e1e 70%,#0e1a0e 100%);position:relative;overflow:hidden;">
+      <!-- Sky gradient -->
+      <div style="position:absolute;inset:0;background:linear-gradient(170deg,#3d5c3a 0%,#2a4427 30%,#1a2e1a 60%,#0d1a0d 100%);"></div>
+      <!-- Sunset glow -->
+      <div style="position:absolute;top:0;right:0;width:60%;height:50%;background:radial-gradient(ellipse at top right,rgba(210,140,60,0.35) 0%,transparent 70%);"></div>
+      <!-- Building silhouette -->
+      <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:78%;height:75%;background:linear-gradient(180deg,#2c3e2c 0%,#1a2a1a 100%);border-radius:2px 2px 0 0;"></div>
+      <!-- Glass facade lines -->
+      <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:78%;height:75%;">
+        <!-- Vertical grid lines -->
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 16.66%,rgba(255,255,255,0.06) 16.66%,rgba(255,255,255,0.06) 17%);"></div>
+        <!-- Horizontal grid lines -->
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 18%,rgba(255,255,255,0.05) 18%,rgba(255,255,255,0.05) 18.5%);"></div>
+        <!-- Warm interior light blocks -->
+        <div style="position:absolute;bottom:12%;left:18%;width:14%;height:22%;background:rgba(255,200,80,0.18);border:1px solid rgba(255,200,80,0.12);"></div>
+        <div style="position:absolute;bottom:12%;left:36%;width:14%;height:22%;background:rgba(255,200,80,0.22);border:1px solid rgba(255,200,80,0.15);"></div>
+        <div style="position:absolute;bottom:12%;left:54%;width:14%;height:22%;background:rgba(255,200,80,0.15);border:1px solid rgba(255,200,80,0.1);"></div>
+        <div style="position:absolute;bottom:38%;left:18%;width:14%;height:18%;background:rgba(255,200,80,0.12);border:1px solid rgba(255,200,80,0.08);"></div>
+        <div style="position:absolute;bottom:38%;left:54%;width:14%;height:18%;background:rgba(255,200,80,0.2);border:1px solid rgba(255,200,80,0.12);"></div>
+        <!-- Green vertical garden strip -->
+        <div style="position:absolute;top:0;left:8%;width:6%;height:100%;background:linear-gradient(180deg,#4a7a40 0%,#3a6030 100%);opacity:0.7;"></div>
+      </div>
+      <!-- Label -->
+      <div style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.55);padding:5px 11px;">
+        <span style="color:white;font-size:9px;font-weight:600;letter-spacing:0.14em;font-family:'Poppins',sans-serif;text-transform:uppercase;">ANKR BUSINESS YARD — HAZMIEH</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DELIVERY BANNER ── -->
+  <div class="delivery-banner">
+    <p>Delivery Date: December 2026</p>
+  </div>
+
+  <!-- ── SECTION TITLE ── -->
+  <div class="section-title">
+    <h1>ANKR Business Yard</h1>
+  </div>
+
+  <!-- ── DESCRIPTION ── -->
+  <div class="description">
+    <p>
+      A landmark commercial address in the heart of Hazmieh, ANKR Business Yard is designed to
+      set your business up for success. Featuring spacious showrooms, premium offices, and flexible
+      layouts, companies can occupy a full floor or combine units to create a custom headquarters.
+    </p>
+  </div>
+
+  <!-- ── DOUBLE BUILDING RENDERS ── -->
+  <div class="double-image">
+    <img src="ANKRBusinessYard1.jpg" alt="ANKR Business Yard exterior">
+    <img src="ANKRBusinessYard2.jpg" alt="ANKR Business Yard evening exterior">
+    <!-- Render 1: Daytime exterior — grey modernist facade -->
+    <div style="width:100%;height:200px;background:linear-gradient(145deg,#b8c8b4 0%,#8aaa82 50%,#6a8a62 100%);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(200deg,#d4e0d0 0%,#a8c0a2 40%,#6a8862 100%);"></div>
+      <div style="position:absolute;bottom:0;left:10%;width:80%;height:80%;background:linear-gradient(180deg,#3a4a38 0%,#2a3828 100%);border-radius:1px 1px 0 0;">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 19%,rgba(180,200,175,0.15) 19%,rgba(180,200,175,0.15) 20%);"></div>
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 22%,rgba(180,200,175,0.1) 22%,rgba(180,200,175,0.1) 22.5%);"></div>
+        <!-- Round corner tower -->
+        <div style="position:absolute;left:0;top:0;width:22%;height:100%;background:linear-gradient(180deg,#2e3e2c 0%,#1e2e1c 100%);border-radius:50% 0 0 0 / 30% 0 0 0;"></div>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:12%;background:linear-gradient(0deg,rgba(0,0,0,0.3),transparent);"></div>
+    </div>
+    <!-- Render 2: Evening exterior — warm glass -->
+    <div style="width:100%;height:200px;background:linear-gradient(145deg,#1a2a1a 0%,#243824 60%,#1a2e1a 100%);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70%;height:60%;background:radial-gradient(ellipse at top right,rgba(200,130,50,0.3) 0%,transparent 70%);"></div>
+      <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:85%;height:82%;background:linear-gradient(180deg,#2a3a28 0%,#1a2a18 100%);">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 14%,rgba(255,255,255,0.06) 14%,rgba(255,255,255,0.06) 14.5%);"></div>
+        <div style="position:absolute;bottom:10%;left:20%;width:16%;height:28%;background:rgba(255,190,60,0.22);"></div>
+        <div style="position:absolute;bottom:10%;left:42%;width:16%;height:28%;background:rgba(255,190,60,0.28);"></div>
+        <div style="position:absolute;bottom:10%;left:64%;width:16%;height:28%;background:rgba(255,190,60,0.18);"></div>
+        <!-- Green vertical garden -->
+        <div style="position:absolute;right:0;top:0;width:5%;height:100%;background:linear-gradient(180deg,#4a7040 0%,#3a5830 100%);opacity:0.8;"></div>
+      </div>
+      <!-- Sign -->
+      <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);white-space:nowrap;">
+        <span style="color:rgba(255,255,255,0.7);font-size:8px;letter-spacing:0.2em;font-family:'Poppins',sans-serif;font-weight:500;text-transform:uppercase;">ANKR BUSINESS YARD</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA BUTTONS ── -->
+  <div class="cta-row">
+    <a href="https://drive.google.com/uc?export=download&id=1m_Gyaejex2THQLBFtu-jBPkxhnVKgtlo" class="cta-btn">Download Brochure</a>
+    <a href="https://www.ankrdevelopment.com" class="cta-btn" target="_blank">Available Units</a>
+  </div>
+
+  <!-- ── ONGOING CONSTRUCTION ── -->
+  <div class="section-heading">
+    <h2>Ongoing Construction Work</h2>
+  </div>
+
+  <!-- Construction collage — 4 cells representing the 4-panel photo from PDF -->
+  <div class="construction-grid" style="margin-bottom:32px;">
+    <!-- Cell 1: Curved formwork / scaffolding -->
+    <div class="cell" style="background:linear-gradient(145deg,#6a8060 0%,#4a6040 100%);">
+      <img src="UnderConstruction1.png" alt="Ongoing construction work 1">
+      <div style="width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;">
+        <div style="width:70%;height:75%;border:3px solid rgba(255,255,255,0.25);border-radius:50% 50% 0 0;border-bottom:none;position:relative;">
+          <div style="position:absolute;top:10px;left:-12px;right:-12px;height:2px;background:rgba(255,255,255,0.2);"></div>
+          <div style="position:absolute;top:25px;left:-8px;right:-8px;height:2px;background:rgba(255,255,255,0.15);"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Cell 2: Concrete pour -->
+    <div class="cell" style="background:linear-gradient(145deg,#5a7050 0%,#3a5030 100%);">
+      <img src="UnderConstruction2.png" alt="Ongoing construction work 2">
+      <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <div style="width:50%;height:50%;background:rgba(180,160,120,0.4);border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,0.3);"></div>
+      </div>
+    </div>
+    <!-- Cell 3: Timber formwork texture -->
+    <div class="cell" style="background:linear-gradient(145deg,#7a6040 0%,#5a4020 100%);">
+      <img src="UnderConstruction3.png" alt="Ongoing construction work 3">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 8px,rgba(255,255,255,0.05) 8px,rgba(255,255,255,0.05) 9px);"></div>
+    </div>
+    <!-- Cell 4: Building structure -->
+    <div class="cell" style="background:linear-gradient(145deg,#5a7858 0%,#3a5838 100%);">
+      <img src="UnderConstruction4.png" alt="Ongoing construction work 4">
+      <div style="width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;">
+        <div style="width:55%;height:85%;background:rgba(200,210,190,0.2);border:2px solid rgba(200,210,190,0.2);">
+          <div style="height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 22%,rgba(255,255,255,0.08) 22%,rgba(255,255,255,0.08) 24%);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ALL PROJECTS ── -->
+  <div class="section-heading">
+    <h2>All Our Projects Under Construction</h2>
+  </div>
+
+  <div class="projects-grid" style="margin-bottom:4px;">
+
+    <!-- MONOT 95 -->
+    <div class="project-card" style="background:linear-gradient(160deg,#2a3a48 0%,#1a2a38 100%);">
+      <img src="MONOT95.jpg" alt="MONOT 95">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 18%,rgba(255,255,255,0.04) 18%,rgba(255,255,255,0.04) 18.5%);"></div>
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 20%,rgba(255,255,255,0.03) 20%,rgba(255,255,255,0.03) 20.5%);"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(0deg,rgba(0,0,0,0.4),transparent);"></div>
+    </div>
+
+    <!-- LEO 252 -->
+    <div class="project-card" style="background:linear-gradient(160deg,#2a2e3a 0%,#1a1e2a 100%);">
+      <img src="LEO252.jpg" alt="LEO 252">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 16%,rgba(255,255,255,0.04) 16%,rgba(255,255,255,0.04) 16.5%);"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(0deg,rgba(0,0,0,0.35),transparent);"></div>
+      <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:50%;height:55%;background:rgba(80,80,100,0.4);"></div>
+    </div>
+
+    <!-- ANKR 9900 -->
+    <div class="project-card" style="background:linear-gradient(160deg,#2a3c2e 0%,#1a2c1e 100%);">
+      <img src="ANKR9900.jpg" alt="ANKR 9900">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(100,160,100,0.15) 0%,transparent 60%);"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(0deg,rgba(0,0,0,0.35),transparent);"></div>
+    </div>
+
+    <!-- ANKR 9901 -->
+    <div class="project-card" style="background:linear-gradient(160deg,#3a3428 0%,#2a2418 100%);">
+      <img src="ANKR9901.jpg" alt="ANKR 9901">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(255,255,255,0.02) 12px,rgba(255,255,255,0.02) 13px);"></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(0deg,rgba(0,0,0,0.35),transparent);"></div>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER BANNER ── -->
+  <div class="footer-banner">
+    <h3>Set Your ANKR Where It Matters</h3>
+    <div class="social-icons">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61556075541177" target="_blank" class="social-btn" title="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/ankrdevelopment" target="_blank" class="social-btn" title="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/company/ankr-development/" target="_blank" class="social-btn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER CONTACT / LOGO ── -->
+  <!-- ── UNSUBSCRIBE ── -->
+</div><!-- /email-wrapper -->
+</body>
+</html>
