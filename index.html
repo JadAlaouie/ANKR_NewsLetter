@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ANKR Development | Monthly Newsletter May 2026</title>
+<link rel="icon" type="image/webp" href="ankr_logo.webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -39,21 +40,27 @@
   /* ── HEADER ── */
   .header {
     background: var(--green-bg);
-    padding: 16px 36px;
+    height: 152px;
+    padding: 0 36px;
     display: flex;
     align-items: center;
     gap: 12px;
     border-bottom: 1px solid var(--border);
+    overflow: hidden;
   }
 
   .logo-icon {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     flex-shrink: 0;
     object-fit: contain;
   }
 
   /* ── NEWSLETTER BADGE ── */
+  .newsletter-badge-wrap {
+    padding: 28px 36px 0;
+  }
+
   .newsletter-badge {
     background: var(--white);
     display: inline-block;
@@ -451,6 +458,120 @@
   }
 
   /* ── FADE IN ANIMATION ── */
+  @media (max-width: 720px) {
+    .email-wrapper {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .header {
+      height: 124px;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .logo-icon {
+      width: 124px;
+      height: 124px;
+    }
+
+    .newsletter-badge,
+    .intro-section,
+    .hero-image-wrap,
+    .delivery-banner,
+    .section-heading,
+    .footer-banner {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .newsletter-badge-wrap {
+      padding: 24px 20px 0;
+    }
+
+    .intro-section {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 24px;
+    }
+
+    .intro-text {
+      padding-right: 0;
+    }
+
+    .intro-logo img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .hero-image-wrap img {
+      height: 280px;
+    }
+
+    .section-title,
+    .description {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .double-image,
+    .cta-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .construction-grid,
+    .projects-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .header {
+      height: 108px;
+    }
+
+    .logo-icon {
+      width: 108px;
+      height: 108px;
+    }
+
+    .hero-image-wrap img {
+      height: 220px;
+    }
+
+    .hero-label {
+      max-width: calc(100% - 28px);
+      font-size: 8px;
+      line-height: 1.35;
+    }
+
+    .construction-grid .cell,
+    .project-card {
+      height: 130px;
+    }
+
+    .double-image img {
+      height: 130px;
+    }
+
+    .cta-btn {
+      font-size: 8px;
+      padding: 12px 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-banner h3,
+    .section-title h1 {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -481,7 +602,7 @@
   </div>
 
   <!-- ── NEWSLETTER BADGE ── -->
-  <div style="padding: 28px 36px 0;">
+  <div class="newsletter-badge-wrap">
     <div class="newsletter-badge" style="margin:0">
       <span>Monthly Newsletter | May 2026</span>
     </div>
