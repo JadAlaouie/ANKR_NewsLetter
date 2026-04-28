@@ -522,9 +522,15 @@
       margin-right: 20px;
     }
 
-    .construction-grid,
-    .projects-grid {
+    .construction-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
       margin-left: 20px !important;
       margin-right: 20px !important;
     }
@@ -540,6 +546,40 @@
       height: 108px;
     }
 
+    .newsletter-badge-wrap {
+      padding: 18px 16px 0;
+    }
+
+    .newsletter-badge {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 9px 12px;
+      text-align: center;
+    }
+
+    .newsletter-badge span {
+      font-size: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .intro-section {
+      margin: 18px 16px 28px;
+      padding: 18px;
+      gap: 12px;
+    }
+
+    .intro-text p {
+      font-size: 11px;
+      line-height: 1.65;
+      text-align: left;
+    }
+
+    .intro-logo img {
+      width: 112px;
+      height: 112px;
+    }
+
     .hero-image-wrap img {
       height: 220px;
     }
@@ -550,9 +590,17 @@
       line-height: 1.35;
     }
 
-    .construction-grid .cell,
-    .project-card {
+    .construction-grid .cell {
       height: 130px;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .project-card {
+      height: 190px;
     }
 
     .double-image img {
