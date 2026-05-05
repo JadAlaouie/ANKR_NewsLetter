@@ -43,7 +43,7 @@
 
   /* HERO */
   .hero { background:linear-gradient(135deg,#6C915F 0%,#54764B 45%,#395B32 100%);min-height:100svh;min-height:min(100svh,920px);display:flex;flex-direction:column;justify-content:center;padding:clamp(102px,11vw,150px) clamp(16px,4vw,56px) clamp(52px,7vw,88px);position:relative;overflow:hidden;isolation:isolate; }
-  .hero::before { content:'';position:absolute;inset:-12% -10%;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.22),transparent 32%),radial-gradient(circle at 82% 76%,rgba(214,228,212,.2),transparent 38%),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:auto,auto,44px 44px,44px 44px;mask-image:radial-gradient(ellipse 88% 88% at center,black 45%,transparent 100%);z-index:-2; }
+  .hero::before { content:'';position:absolute;inset:-12% -10%;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.22),transparent 32%),radial-gradient(circle at 82% 76%,rgba(214,228,212,.2),transparent 38%);mask-image:radial-gradient(ellipse 88% 88% at center,black 45%,transparent 100%);z-index:-2; }
   .hero::after { content:'';position:absolute;width:clamp(300px,40vw,620px);aspect-ratio:1/1;right:clamp(-120px,-4vw,-24px);top:clamp(80px,16vh,200px);background:url('https://ankr-newsletter.onrender.com/ANKR-removebg-preview.png') center/contain no-repeat;opacity:.08;filter:grayscale(1) contrast(1.1);pointer-events:none;z-index:-1; }
   .hero-inner { width:min(1460px,100%);margin:0 auto;display:grid;grid-template-columns:1.2fr .95fr;gap:clamp(22px,3.2vw,52px);align-items:end; }
   .hero-copy { max-width:680px; }
