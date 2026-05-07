@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ANKR Development | Monthly Newsletter May 2026</title>
-<link rel="icon" type="image/png" href="favicon.png?v=2">
-<link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
-<link rel="apple-touch-icon" href="favicon.png?v=2">
+<link rel="icon" type="image/png" href="favicon.png?v=4">
+<link rel="shortcut icon" type="image/png" href="favicon.png?v=4">
+<link rel="apple-touch-icon" href="favicon.png?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -41,31 +41,31 @@
   /* HEADER */
   header { position:fixed;top:0;left:0;right:0;z-index:100;padding:0 clamp(16px,4.5vw,56px);height:clamp(86px,10vw,108px);display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s; }
   header.scrolled { background:rgba(166,209,157,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(77,116,69,.25); }
-  .header-logo { height:clamp(52px,5.2vw,74px);filter:brightness(0) invert(1);opacity:.92; }
+  .header-logo { height:clamp(52px,5.2vw,74px);filter:brightness(0);opacity:.92; }
   .header-issue { font-size:clamp(8px,.75vw,10px);letter-spacing:.28em;text-transform:uppercase;color:rgba(24,35,21,.7); }
 
   /* HERO */
-  .hero { background:linear-gradient(135deg,#A6D19D 0%,#7EA974 52%,#4D7445 100%);min-height:100svh;min-height:min(100svh,920px);display:flex;flex-direction:column;justify-content:center;padding:clamp(102px,11vw,150px) clamp(16px,4vw,56px) clamp(52px,7vw,88px);position:relative;overflow:hidden;isolation:isolate; }
-  .hero::before { content:'';position:absolute;inset:-12% -10%;background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.24),transparent 32%),radial-gradient(circle at 82% 76%,rgba(234,246,231,.22),transparent 38%);mask-image:radial-gradient(ellipse 88% 88% at center,black 45%,transparent 100%);z-index:-2; }
+  .hero { background:var(--white);min-height:100svh;min-height:min(100svh,920px);display:flex;flex-direction:column;justify-content:center;padding:clamp(102px,11vw,150px) clamp(16px,4vw,56px) clamp(52px,7vw,88px);position:relative;overflow:hidden;isolation:isolate; }
+  .hero::before { content:'';position:absolute;inset:-12% -10%;background:radial-gradient(circle at 18% 20%,rgba(166,209,157,.14),transparent 32%),radial-gradient(circle at 82% 76%,rgba(234,246,231,.32),transparent 38%);mask-image:radial-gradient(ellipse 88% 88% at center,black 45%,transparent 100%);z-index:-2; }
   .hero::after { content:'';position:absolute;width:clamp(300px,40vw,620px);aspect-ratio:1/1;right:clamp(-120px,-4vw,-24px);top:clamp(80px,16vh,200px);background:url('https://ankr-newsletter.onrender.com/ANKR-removebg-preview.png') center/contain no-repeat;opacity:.08;filter:grayscale(1) contrast(1.1);pointer-events:none;z-index:-1; }
   .hero-inner { width:min(1460px,100%);margin:0 auto;display:grid;grid-template-columns:1.2fr .95fr;gap:clamp(22px,3.2vw,52px);align-items:end; }
   .hero-copy { max-width:680px;min-width:0; }
   .hero-tag { font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:rgba(24,35,21,.62);margin-bottom:24px; }
   .hero-title { font-family:var(--serif);font-size:clamp(44px,7.2vw,108px);font-weight:700;line-height:.9;letter-spacing:normal;color:var(--dark);font-style:normal; }
-  .hero-title em { font-style:normal;color:var(--sage-deep); }
+  .hero-title em { font-style:normal;color:var(--sage); }
   .hero-rule { width:58px;height:1px;background:rgba(24,35,21,.28);margin:30px 0; }
   .hero-lead { width:100%;max-width:540px;font-size:17.7778px;line-height:21.3334px;color:rgba(24,35,21,.72);letter-spacing:normal;font-weight:400;font-style:normal;overflow-wrap:break-word; }
-  .hero-lead strong { color:var(--sage-deep);font-weight:700; }
+  .hero-lead strong { color:var(--sage);font-weight:700; }
   .hero-cta { display:flex;gap:12px;flex-wrap:wrap;margin-top:34px; }
-  .hero-cta .btn-primary { background:var(--white);border-color:var(--white);color:var(--sage-deep); }
+  .hero-cta .btn-primary { background:var(--white);border-color:rgba(24,35,21,.18);color:var(--sage-deep); }
   .hero-cta .btn-primary:hover { background:rgba(255,255,255,.9); }
   .hero-cta .btn-outline { color:var(--dark);border-color:rgba(24,35,21,.32); }
   .hero-cta .btn-outline:hover { border-color:var(--dark);color:var(--dark);background:rgba(24,35,21,.08); }
-  .hero-panel { background:rgba(28,36,25,.26);border:1px solid rgba(255,255,255,.24);padding:clamp(16px,2.2vw,26px);backdrop-filter:blur(3px); }
+  .hero-panel { background:rgba(166,209,157,.12);border:1px solid rgba(166,209,157,.32);padding:clamp(16px,2.2vw,26px);backdrop-filter:blur(3px); }
   .hero-panel img { width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:brightness(.82) saturate(.9); }
   .hero-panel-meta { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px; }
-  .hero-kicker { font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.58); }
-  .hero-value { font-family:var(--serif);font-size:clamp(18px,2vw,27px);font-weight:700;line-height:1.15;color:var(--white);margin-top:4px;font-style:normal;letter-spacing:normal; }
+  .hero-kicker { font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(24,35,21,.58); }
+  .hero-value { font-family:var(--serif);font-size:clamp(18px,2vw,27px);font-weight:700;line-height:1.15;color:var(--dark);margin-top:4px;font-style:normal;letter-spacing:normal; }
   .hero-scroll { position:absolute;left:50%;bottom:clamp(18px,4vw,38px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;border:none;background:none; }
   .hero-scroll span { font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(24,35,21,.55); }
   .scroll-bar { width:1px;height:52px;background:linear-gradient(to bottom,rgba(24,35,21,.5),transparent);animation:scrollBlink 2.2s ease-in-out infinite; }
@@ -74,10 +74,10 @@
   @keyframes fadeUpCentered{from{opacity:0;transform:translate(-50%,22px)}to{opacity:1;transform:translate(-50%,0)}}
 
   /* MARQUEE */
-  .marquee-wrap { overflow:hidden;background:var(--sage-dark);padding:13px 0;border-top:1px solid rgba(77,116,69,.3);border-bottom:1px solid rgba(77,116,69,.3); }
+  .marquee-wrap { overflow:hidden;background:var(--white);padding:13px 0;border-top:1px solid rgba(0,0,0,.16);border-bottom:1px solid rgba(0,0,0,.16); }
   .marquee-track { display:flex;white-space:nowrap;animation:marquee 32s linear infinite; }
-  .marquee-item { font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55);padding:0 28px;display:inline-flex;align-items:center;gap:28px; }
-  .marquee-item::after { content:'\00B7';color:rgba(255,255,255,.28);font-size:14px; }
+  .marquee-item { font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:rgb(0,0,0);padding:0 28px;display:inline-flex;align-items:center;gap:28px; }
+  .marquee-item::after { content:'\00B7';color:rgba(0,0,0,.38);font-size:14px; }
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* LAYOUT */
