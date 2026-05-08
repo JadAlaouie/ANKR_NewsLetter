@@ -21,7 +21,7 @@ APP_ID       = "1476734250214271"
 #  BUTTON URLS
 # ─────────────────────────────────────────────
 LEARN_MORE_URL = "https://ankrdevelopment.com/page/properties/28"
-BROCHURE_URL   = "https://ankr-newsletter.onrender.com/ANKR_BUSINESS_YARD.pdf"
+BROCHURE_URL   = "https://drive.google.com/uc?export=download&id=1mCoDzk1xGr7u4nh-TYKTEnAqQGgaeQ2h"
 
 # ─────────────────────────────────────────────
 #  MEDIA HANDLES  ← paste 'h' values from img_upload_ankr.py here
