@@ -20,8 +20,8 @@ APP_ID       = "1476734250214271"
 # ─────────────────────────────────────────────
 #  BUTTON URLS
 # ─────────────────────────────────────────────
-LEARN_MORE_URL = "https://www.ankrdevelopment.com"
-BROCHURE_URL   = "https://drive.google.com/uc?export=download&id=1m_Gyaejex2THQLBFtu-jBPkxhnVKgtlo"
+LEARN_MORE_URL = "https://ankrdevelopment.com/page/properties/28"
+BROCHURE_URL   = "https://ankr-newsletter.onrender.com/ANKR_BUSINESS_YARD.pdf"
 
 # ─────────────────────────────────────────────
 #  MEDIA HANDLES  ← paste 'h' values from img_upload_ankr.py here
@@ -86,7 +86,7 @@ def make_card(handle, body_text):
                 "buttons": [
                     {
                         "type": "url",
-                        "text": "Learn More",
+                        "text": "See Available Units",
                         "url":  LEARN_MORE_URL,
                     },
                     {
@@ -134,7 +134,7 @@ print("=" * 65)
 print(f"\n  Template : {template_data['name']}")
 print(f"  WABA ID  : {WABA_ID}")
 print(f"  Cards    : {len(carousel_cards)}")
-print(f"  Buttons  : [1] Learn More \u2192 {LEARN_MORE_URL}")
+print(f"  Buttons  : [1] See Available Units \u2192 {LEARN_MORE_URL}")
 print(f"             [2] Download Brochure \u2192 {BROCHURE_URL}")
 print("\nSubmitting...\n")
 
